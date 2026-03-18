@@ -2,7 +2,8 @@
 <html>
 <head>
 <title>Henry's Website</title>
-     <meta charset="utf-8">
+
+     <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=Edge">
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -11,10 +12,32 @@
      <link rel="stylesheet" href="assets/CSS/vegas.min.css">
      <link rel="stylesheet" href="assets/CSS/font-awesome.min.css">
      <link rel="stylesheet" href="assets/CSS/templatemo-style.css">
-<link rel="stylesheet" href="assets/CSS/css/Style.css">
+
+     <!-- Your overrides -->
+     <link rel="stylesheet" href="assets/CSS/Style.css">
 </head>
 
 <body>
+<!-- PRE LOADER -->
+<section class="preloader">
+     <div class="spinner">
+          <span class="spinner-rotate"></span>
+     </div>
+</section>
+
+<!-- GRID LINE -->
+<section class="grid">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+          </div>
+     </div>
+</section>
+
 <div class="menu-bg"></div>
 <div class="menu-burger">☰</div>
 
@@ -25,6 +48,8 @@
                     <h1>Navigation</h1>
                     <ul class="menu">
                          <li><a href="index.html">Home</a></li>
+                         <li><a href="school.html">School</a></li>
+                         <li><a href="hobbies.html">Hobbies</a></li>
                          <li class="active"><a href="work.html">Work</a></li>
                          <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -52,40 +77,63 @@
           </div>
      </div>
 </div>
-	<div class="page-wrap">
-	<table class="global-table">
-		<tr class="banner-row">
-			<td colspan="5" class="banner-cell">
-				<img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExOGR0OWJ5ZGQ4NDQ5ZjR5YjZpY2N4MzQ2eHo3dG9yajNibnowNDRycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/j3hqssdFfHkpndO1qP/giphy.gif" alt="Silent" class="imageLogoSmall">
-		  		<h1 id="top">Welcome to Henry's homepage</h1>
-			</td>
-	  	</tr>
-		<tr class="nav-row">
-			<td class="nav-cell"><a class="nav-link" href="index.html">Home</a></td>
-			<td class="nav-cell"><a class="nav-link" href="work.html">Work</a></td>
-			<td class="nav-cell"><a class="nav-link" href="contact.html">Contact</a></td>
-		</tr>
-	</table>
+<section id="work">
+  <div class="overlay"></div>
 
-	<table class="global-table">
-	  <tr class="section-title-row">
-		<td colspan="5">
-		  <h2 class="section-title">Work / Dream Job</h2>
-		</td>
-	  </tr>
+  <div class="container-fluid page-fluid">
+    <div class="row mt-15">
 
-	  <tr class="content-row">
-		<td colspan="5">
-		  <div class="content">
-			<p>
-			  Currently I am focused on completing my degree. After graduation, my dream job is to work as a software developer or Cybersecurity in defense team in any Big-Tech company.
-			</p>
+      <div class="col-md-12">
+        <div class="home-info panel-glass">
 
-			<p><a class="back-top" href="#top">Back to Top</a></p>
-		  </div>
-		</td>
-	  </tr>
-	</table>
+          <h1 class="page-title">Work</h1>
+
+          <div class="row">
+
+            <!-- Project 1 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="mini-card">
+                <h4>Personal Website</h4>
+                <p>
+                  This website is my personal portfolio where I introduce myself,
+                  my interests, and my projects. It is built using
+                  <b>HTML, CSS, Bootstrap</b> and hosted on AWS.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="mini-card">
+                <h4>LeetCode Practice</h4>
+                <p>
+                  I actively practice algorithm problems on LeetCode
+                  to improve my problem-solving skills and prepare for
+                  software engineering interviews.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="mini-card">
+                <h4>Future Projects</h4>
+                <p>
+                  I plan to build more projects including
+                  web applications, AI tools, and personal
+                  development projects.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
 	
 	<script>
 	  document.querySelectorAll(".nav-link").forEach(link => {
@@ -101,7 +149,7 @@
 		});
 	  });
 	</script>
-    <script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/vegas.min.js"></script>
 	<script src="assets/js/smoothscroll.js"></script>
