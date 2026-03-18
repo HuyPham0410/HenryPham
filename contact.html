@@ -1,0 +1,170 @@
+<!doctype html>
+<html>
+<head>
+<title>Henry's Website</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <!-- Theme CSS (Get Ready) -->
+     <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/CSS/vegas.min.css">
+     <link rel="stylesheet" href="assets/CSS/font-awesome.min.css">
+     <link rel="stylesheet" href="assets/CSS/templatemo-style.css">
+
+     <!-- Your overrides -->
+     <link rel="stylesheet" href="assets/CSS/css/Style.css">
+</head>
+
+<body>
+<!-- PRE LOADER -->
+<section class="preloader">
+     <div class="spinner">
+          <span class="spinner-rotate"></span>
+     </div>
+</section>
+
+<!-- GRID LINE -->
+<section class="grid">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+          </div>
+     </div>
+</section>
+
+<div class="menu-bg"></div>
+<div class="menu-burger">☰</div>
+
+<div class="menu-items">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-offset-2 col-md-4 col-sm-6">
+                    <h1>Navigation</h1>
+                    <ul class="menu">
+                         <li><a href="index.html">Home</a></li>
+                         <li><a href="work.html">Work</a></li>
+                         <li class="active"><a href="contact.html">Contact</a></li>
+                    </ul>
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <address>
+                         <h1>About</h1>
+                         <p>
+                              Huy Gia Pham (Henry) <br/>
+                              Computer Science @ UTSA <br/>
+                              San Antonio, TX
+                         </p>
+                    </address>
+               </div>
+
+               <div class="col-md-12 col-sm-12">
+                    <ul class="social-icon">
+                         <li class="line"></li>
+                         <li><a class="fa fa-github" href="#" title="GitHub"></a></li>
+                         <li><a class="fa fa-linkedin" href="#" title="LinkedIn"></a></li>
+                         <li><a class="fa fa-envelope" href="Contact.html" title="Contact"></a></li>
+                    </ul>
+               </div>
+          </div>
+     </div>
+</div>
+<section id="Contact">
+  <div class="overlay"></div>
+
+  <div class="container-fluid page-fluid">
+    <div class="row mt-15">
+
+      <div class="col-md-12">
+        <div class="home-info panel-glass">
+
+          <h1 class="page-title">Contact</h1>
+
+          <div class="row">
+
+            <!-- Contact info -->
+            <div class="col-md-6 col-sm-12">
+              <div class="card">
+
+                <h3>Contact Information</h3>
+
+                <p><b>Name:</b> Huy Gia Pham</p>
+                <p><b>Email:</b> giahuyphamm@gmail.com</p>
+                <p><b>Location:</b> San Antonio, Texas</p>
+
+                <p class="muted">
+                  Feel free to reach out if you want to collaborate
+                  or discuss technology and projects.
+                </p>
+
+              </div>
+            </div>
+
+            <!-- Contact form -->
+            <div class="col-md-6 col-sm-12">
+              <div class="card">
+
+                <h3>Send me a message</h3>
+
+                <form>
+
+                  <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" class="form-control">
+                  </div>
+
+                  <div class="form-group">
+                    <label>Message</label>
+                    <textarea class="form-control" rows="4"></textarea>
+                  </div>
+
+                  <button class="btn btn-primary">
+                    Send Message
+                  </button>
+
+                </form>
+
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+		<script>
+	  document.querySelectorAll(".nav-link").forEach(link => {
+		link.addEventListener("click", function(e) {
+		  e.preventDefault();
+		  const target = this.href;
+
+		  document.body.classList.add("fade-out");
+
+		  setTimeout(() => {
+			window.location.href = target;
+		  }, 500); // 0.5s delay
+		});
+	  });
+	</script>
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/vegas.min.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/custom.js"></script>
+</body>
+</html>
