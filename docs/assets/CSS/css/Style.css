@@ -1,0 +1,340 @@
+html, body{ height:100%; }
+body{ letter-spacing: 0.2px; }
+a, a:hover{ text-decoration:none; }
+
+.panel-glass{
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+.mini-card{
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+}
+.mini-card h4{
+  margin: 0 0 10px;
+  color: rgba(255,255,255,0.92);
+}
+
+/* Images (always cover) */
+.img-frame{
+  width:100%;
+  height: 120px;          /* compact default */
+  overflow:hidden;
+  border-radius: 10px;
+}
+.img-frame img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+  display:block;
+}
+.img-frame-lg{
+  height: 160px;          /* compact external image */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ============ FORMS (contact) ============ */
+.form-control{
+  border-radius:10px;
+  border: 1px solid rgba(255,255,255,0.20);
+  background: rgba(0,0,0,0.25);
+  color: rgba(255,255,255,0.90);
+}
+.form-control:focus{
+  border-color: rgba(255,255,255,0.35);
+  box-shadow: 0 0 0 3px rgba(255,255,255,0.10);
+}
+label{ color: rgba(255,255,255,0.85); }
+
+/* ============ FOOTER (optional) ============ */
+.site-footer{
+  padding: 22px 0 16px;
+  text-align:center;
+  color: rgba(255,255,255,0.65);
+}
+.footer-logo{
+  width:70px;
+  height:70px;
+  border-radius:50%;
+  object-fit: cover;
+  border: 3px solid rgba(255,255,255,0.20);
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
+  margin-bottom: 10px;
+  opacity: 0.95;
+}
+.footer-links{ margin: 6px 0 6px; opacity: 0.85; }
+.footer-links a{ color: rgba(255,255,255,0.85); }
+.footer-links a:hover{ color:#fff; opacity:1; }
+
+#school, #hobbies, #work, #contact{
+  height: auto;
+  min-height: 100vh;
+  overflow: visible;
+  position: relative;
+}
+
+/* Hobbies background full width + remove the extra dark overlay */
+#hobbies{
+  width: 100%;
+  background: rgba(170,140,90,0.55);
+}
+#hobbies .overlay{ display:none !important; }
+
+/* Panel: no internal scroll, no max-height cap */
+#school .home-info.panel-glass,
+#hobbies .home-info.panel-glass,
+#work .home-info.panel-glass,
+#contact .home-info.panel-glass{
+  max-height: none;
+  overflow: visible;
+}
+
+#hobbies .home-info.panel-glass{
+  display: block !important;
+}
+
+/* Title: normal (NOT sticky) */
+#hobbies .page-title{
+  text-align: left !important;
+  display: block;
+  margin: 0 0 14px 0;
+  padding: 0;
+  background: transparent;
+  border: 0;
+}
+
+/* Utilities fix */
+.mt-15{ margin-top:15px; }
+/* ============ PAGE TITLE ============ */
+.page-title{
+  text-align:left !important;
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 6px 0 14px;
+  color: rgba(255,255,255,0.92);
+}
+.page-fluid{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+@media (max-width:768px){
+  .page-fluid{ padding-left: 15px; padding-right: 15px; }
+}
+.box-container {
+    display: flex;
+    justify-content: row;
+    gap: 20px;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.card{
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.16);
+}
+.card h3, .card h4{
+  margin: 0 0 10px;
+  color: rgba(255,255,255,0.92);
+}
+.card p, .card li{
+  color: var(--text);
+  line-height: 1.55;
+}
+.muted{ color: var(--muted); }
+
+.nice-list{ padding-left: 18px; }
+.nice-list li{ margin: 6px 0; }
+.box {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    display: flex;
+}
+@media screen and (max-width: 600px) and (min-width: 300px) {
+    .box-container {
+        flex-direction: column;
+   }
+    .box {
+        background: #333;
+        width: 100%;
+        }
+    }
+    html, body {
+	height: 100%;
+	margin: 0;
+}
+.menu-burger{
+  border-radius: 12px;
+  padding: 10px 14px;
+  background: rgba(0,0,0,0.35);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.90);
+}
+.menu-burger:hover{ background: rgba(0,0,0,0.55); }
+.menu-items .menu li.active a,
+.menu-items .menu li a:hover{
+  color:#fff !important;
+  opacity:1 !important;
+  text-shadow: 0 8px 20px rgba(0,0,0,0.35);
+}
+
+body {
+  background-image: url(https://sm.ign.com/ign_ap/review/w/where-wind/where-winds-meet-review_xbmq.jpg);
+  background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Fade out when leaving */
+body.fade-out {
+  animation: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.page-wrap{
+	background-color: rgba(255, 255, 255, 0.75);
+  	backdrop-filter: blur(4px);
+  	padding: 20px;
+  	border-radius: 8px;
+}
+
+/* Global layout tables */
+.global-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.global-table td {
+  border: none;
+  vertical-align: top;
+}
+
+/* Banner */
+.banner-row {
+}
+
+.banner-cell {
+  position: relative;        /* anchor for absolute logo */
+  text-align: center;
+  padding: 20px 0;
+}
+
+.banner-cell h1 {
+  margin: 0;
+}
+
+/* Logo */
+.imageLogoSmall {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  width: 135px;
+  height: auto;
+  object-fit: contain;
+
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+@keyframes wobble{
+	0% {
+    transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-4px);
+	}
+	50% {
+		transform: translateY(0px);
+	}
+	75% {
+		transform: translateY(-4px);
+	}
+	100% {
+		transform: translateY(0px);
+	}
+}
+
+wobble animation{
+	transform: translateY(wobble);
+}
+
+/* Navigation */
+.nav-row {
+	padding: 20px 25px;
+	text-align: center;
+	unicode-bidi: isolate;
+	border-color: inherit;
+	font-size: 20px;
+	font-style: oblique;
+	animation: wobble 2s ease-in-out infinite;
+}
+
+.nav-cell {
+  width: 20%;
+  text-align: center;
+  padding: 10px 0;
+}
+
+/* REQUIRED: no underline + centered text */
+.nav-link {
+  color: black;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-link:hover {
+  background-color: #666666;
+  transform: scale(1.05);
+}
+
+/* Section title bar */
+.section-title-row {
+  text-align: center;
+}
+
+.section-title {
+  color: black;
+  margin: 0;
+  padding: 12px 0;
+}
+
+/* Content */
+.content-row {
+}
+
+.content {
+  padding: 12px;
+}
+
+/* Back to top */
+.back-top {
+  text-decoration: none;
+  color: blue;
+}
