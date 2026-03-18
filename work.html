@@ -154,4 +154,160 @@
 	<script src="assets/js/custom.js"></script>
 	</div>
 </body>
+</html><!doctype html>
+<html>
+<head>
+<title>Henry's Website</title>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+     <!-- Theme CSS (Get Ready) -->
+     <link rel="stylesheet" href="assets/CSS/bootstrap.min.css">
+     <link rel="stylesheet" href="assets/CSS/vegas.min.css">
+     <link rel="stylesheet" href="assets/CSS/font-awesome.min.css">
+     <link rel="stylesheet" href="assets/CSS/templatemo-style.css">
+
+     <!-- Your overrides -->
+     <link rel="stylesheet" href="assets/CSS/Style.css">
+</head>
+
+<body>
+<!-- PRE LOADER -->
+<section class="preloader">
+     <div class="spinner">
+          <span class="spinner-rotate"></span>
+     </div>
+</section>
+
+<!-- GRID LINE -->
+<section class="grid">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+               <div class="col-md-2 col-sm-2"><div class="grid-line"></div></div>
+          </div>
+     </div>
+</section>
+
+<div class="menu-bg"></div>
+<div class="menu-burger">☰</div>
+
+<div class="menu-items">
+     <div class="container">
+          <div class="row">
+               <div class="col-md-offset-2 col-md-4 col-sm-6">
+                    <h1>Navigation</h1>
+                    <ul class="menu">
+                         <li><a href="index.html">Home</a></li>
+                         <li class="active"><a href="work.html">Work</a></li>
+                         <li><a href="contact.html">Contact</a></li>
+                    </ul>
+               </div>
+
+               <div class="col-md-4 col-sm-6">
+                    <address>
+                         <h1>About</h1>
+                         <p>
+                              Huy Gia Pham (Henry) <br/>
+                              Computer Science @ UTSA <br/>
+                              San Antonio, TX
+                         </p>
+                    </address>
+               </div>
+
+               <div class="col-md-12 col-sm-12">
+                    <ul class="social-icon">
+                         <li class="line"></li>
+                         <li><a class="fa fa-github" href="#" title="GitHub"></a></li>
+                         <li><a class="fa fa-linkedin" href="#" title="LinkedIn"></a></li>
+                         <li><a class="fa fa-envelope" href="contact.html" title="Contact"></a></li>
+                    </ul>
+               </div>
+          </div>
+     </div>
+</div>
+<section id="work">
+  <div class="overlay"></div>
+
+  <div class="container-fluid page-fluid">
+    <div class="row mt-15">
+
+      <div class="col-md-12">
+        <div class="home-info panel-glass">
+
+          <h1 class="page-title">Work</h1>
+
+          <div class="row">
+
+            <!-- Project 1 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="mini-card">
+                <h4>Personal Website</h4>
+                <p>
+                  This website is my personal portfolio where I introduce myself,
+                  my interests, and my projects. It is built using
+                  <b>HTML, CSS, Bootstrap</b> and hosted on AWS.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="mini-card">
+                <h4>LeetCode Practice</h4>
+                <p>
+                  I actively practice algorithm problems on LeetCode
+                  to improve my problem-solving skills and prepare for
+                  software engineering interviews.
+                </p>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="col-md-4 col-sm-12">
+              <div class="mini-card">
+                <h4>Future Projects</h4>
+                <p>
+                  I plan to build more projects including
+                  web applications, AI tools, and personal
+                  development projects.
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+	
+	<script>
+	  document.querySelectorAll(".nav-link").forEach(link => {
+		link.addEventListener("click", function(e) {
+		  e.preventDefault();
+		  const target = this.href;
+
+		  document.body.classList.add("fade-out");
+
+		  setTimeout(() => {
+			window.location.href = target;
+		  }, 500); // 0.5s delay
+		});
+	  });
+	</script>
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/vegas.min.js"></script>
+	<script src="assets/js/smoothscroll.js"></script>
+	<script src="assets/js/custom.js"></script>
+	</div>
+</body>
 </html>
