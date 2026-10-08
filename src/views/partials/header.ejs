@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Huy (Henry) Pham — UTSA Computer Science graduate. Software, web development, and machine learning projects.">
+  <title><%= title %> · Huy Pham</title>
+  <%# Load local Bootstrap first; the custom stylesheet defines the monochrome visual identity. %>
+  <link rel="stylesheet" href="/assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="/assets/css/site.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header wrap">
+  <a class="brand" href="/" aria-label="Huy Pham home"><span class="monogram">hp.</span><span>HUY PHAM<small>SOFTWARE & CURIOSITY</small></span></a>
+  <%# The active value comes from the controller and identifies the current page for screen readers. %>
+  <nav aria-label="Main navigation">
+    <% for (const [key, label, url] of [['home','Home','/'], ['work','Work','/work'], ['resume','Resume','/resume'], ['contact','Contact','/contact']]) { %>
+      <a href="<%= url %>" <% if (active === key) { %>aria-current="page"<% } %>><%= label %></a>
+    <% } %>
+  </nav>
+</header>
+<main id="main" class="wrap">

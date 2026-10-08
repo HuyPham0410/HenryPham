@@ -1,0 +1,19 @@
+<%- include('../partials/header') %>
+<section class="page-heading"><p class="eyebrow">BACKGROUND / SKILLS / DIRECTION</p><h1>A foundation.<br><span>A next chapter.</span></h1><p class="intro"><%= profile.summary %></p><a class="button" href="<%= profile.cv %>" download>Download original CV ↓</a></section>
+<%# Structured CV data is rendered as accessible HTML; the original PDF remains available for download. %>
+<section class="resume-section row g-4">
+  <div class="col-lg-3"><p class="eyebrow">01 / EDUCATION</p></div>
+  <div class="col-lg-9"><h2><%= profile.education.school %></h2><p class="degree"><%= profile.education.degree %></p><p class="muted"><%= profile.education.date %></p>
+    <div class="score-row"><span>GPA <strong><%= profile.education.gpa %></strong></span><span>Major GPA <strong><%= profile.education.majorGpa %></strong></span></div>
+    <h3 class="small-heading">Relevant coursework</h3><ul class="tags"><% for (const course of profile.education.courses) { %><li><%= course %></li><% } %></ul>
+  </div>
+</section>
+<section class="resume-section row g-4">
+  <div class="col-lg-3"><p class="eyebrow">02 / TECHNICAL TOOLKIT</p></div>
+  <div class="col-lg-9"><div class="row g-4"><% for (const group of profile.skills) { %><div class="col-md-6"><article class="skill-card h-100"><h3><%= group.title %></h3><ul class="tags"><% for (const skill of group.items) { %><li><%= skill %></li><% } %></ul></article></div><% } %></div>
+    <p class="prose mt-4">I use AI-assisted workflows for analysis, debugging, research, and idea exploration, while independently reviewing and validating the final output.</p>
+  </div>
+</section>
+<section class="resume-section row g-4"><div class="col-lg-3"><p class="eyebrow">03 / COMMUNICATION</p></div><div class="col-lg-9"><% for (const language of profile.languages) { %><p class="degree"><%= language %></p><% } %></div></section>
+<section class="callout section-space"><div><p class="eyebrow">LET'S CONNECT</p><h2>Ready to learn. Ready to contribute.</h2></div><a class="button button-light" href="/contact">Start a conversation ↗</a></section>
+<%- include('../partials/footer') %>

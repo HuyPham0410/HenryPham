@@ -1,0 +1,8 @@
+{
+  "watch": ["server.js", "src", "public", ".env"],
+  "ext": "js,ejs,css,json,env",
+  "ignore": ["data/**", "node_modules/**", "test/**"],
+  "execMap": {
+    "js": "node --experimental-sqlite"
+  }
+}

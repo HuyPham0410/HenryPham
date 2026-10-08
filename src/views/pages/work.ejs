@@ -1,0 +1,16 @@
+<%- include('../partials/header') %>
+<section class="page-heading"><p class="eyebrow">SELECTED WORK / 01—04</p><h1>Built. Tested.<br><span>Learned from.</span></h1><p class="intro">Academic collaborations, independent exploration, and the work behind my learning.</p></section>
+<%# Each project lists the owner's actual contribution instead of implying sole ownership of team work. %>
+<section class="row g-4" aria-label="Projects">
+  <% projects.forEach((project) => { %>
+  <div class="col-lg-6"><article class="project h-100">
+    <div class="project-top"><p class="eyebrow"><%= project.category %></p><span class="badge-label"><%= project.status %></span></div>
+    <h2><%= project.title %></h2><p><%= project.description %></p>
+    <p class="contribution"><%= project.contribution %></p>
+    <ul class="project-details"><% for (const detail of project.details) { %><li><%= detail %></li><% } %></ul>
+    <ul class="tags"><% for (const tag of project.tags) { %><li><%= tag %></li><% } %></ul>
+  </article></div>
+  <% }) %>
+</section>
+<section class="callout section-space"><div><p class="eyebrow">MORE ABOUT MY BACKGROUND</p><h2>The skills behind the work.</h2></div><a class="button button-light" href="/resume">View resume ↗</a></section>
+<%- include('../partials/footer') %>

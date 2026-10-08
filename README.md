@@ -1,79 +1,66 @@
-# Personal Portfolio Website
+# Henry Pham — EJS & Node.js
 
-A personal academic portfolio website developed to practice front-end web development and present my background, projects, and technical experience.
+Phiên bản hiện tại đã cá nhân hóa theo CV: Home, Work, Resume, Contact; Bootstrap 5.3.8 và giao diện trắng–đen với blob. Xem [hướng dẫn cập nhật CV và giao diện](docs/07-CV-VA-GIAO-DIEN.md). Mã nguồn có comment tiếng Anh.
 
-## Overview
+Bản tổ chức lại portfolio từ `HenryPham.zip`. Ba trang chính nằm cùng thư mục `src/views/pages`. Giao diện mới dùng CSS responsive riêng, giữ thông tin Henry, UTSA, email và ba mục Work; phần giới thiệu tiếng Anh được biên tập ngắn lại từ bản gốc.
 
-This project was created as part of my academic web development experience. The website includes multiple pages for presenting personal information, academic work, projects, and contact details.
+Đã đồng bộ cách chạy với mẫu NiceFit theo phạm vi bạn chọn: CommonJS (`require/module.exports`), `server.js` ngoài root, `dotenv` và `nodemon`. Không thêm đăng nhập/Passport hoặc chuyển database sang MySQL.
 
-The project gave me hands-on experience with page structure, responsive layouts, navigation, forms, event handling, styling, and static website deployment.
+## Chạy trên máy của bạn
 
-## Technologies Used
+Cài Node.js 24 LTS (tối thiểu 22.12). Mở terminal trong thư mục chứa `package.json`:
 
-- HTML
-- CSS
-- JavaScript
-- Bootstrap
-- Git
-- GitHub
-- GitHub Pages
-- Jekyll
+```powershell
+npm ci
+Copy-Item .env.example .env
+npm run dev
+```
 
-## Features
+Mở http://127.0.0.1:3000. Dừng bằng Ctrl+C. `npm start` chạy không tự tải lại; `npm test` chạy kiểm thử. Cờ `--experimental-sqlite` hỗ trợ Node 22.12; cảnh báo experimental trên bản Node này là dự kiến.
 
-- Multi-page website structure
-- Responsive page layouts
-- Navigation between website sections
-- Contact page
-- Interactive UI components
-- Custom styling and visual layout
-- Static website deployment through GitHub Pages
+Không mở file EJS bằng cách nhấp đúp và không dùng Live Server: EJS cần Node render qua HTTP.
 
-## My Contribution
+## Cấu trúc
 
-This is an individual academic project.
+```text
+server.js                   Đọc .env rồi gọi src/server.js
+nodemon.json                Tự restart khi sửa code/giao diện lúc học
+src/
+  server.js                 Khởi động / dừng server
+  app.js                    Lắp middleware, routes, các đối tượng
+  config.js                 Đọc và kiểm tra cấu hình
+  routes/index.js           URL → controller
+  controllers/              Điều phối request / response
+  services/                 Quy tắc và kiểm tra dữ liệu
+  repositories/             Lưu / đọc SQLite
+  middleware/security.js    Headers, giới hạn gửi, CSRF
+  data/content.js           Nội dung portfolio
+  views/
+    pages/                  index, work, contact, success, error.ejs
+    partials/               header.ejs, footer.ejs dùng chung
+public/
+  css/site.css              Một bộ CSS cho cả website
+  images/portrait.jpg       Ảnh chân dung từ bản gốc
+scripts/messages.js         Đọc tin nhắn cục bộ
+test/app.test.js            Kiểm thử chức năng và bảo vệ
+docs/                       Tổng kết, bài học, triển khai
+data/                       Tự tạo khi chạy; không đưa lên Git
+```
 
-I designed and developed the website structure, worked on the front-end layout and styling, implemented interactive components, and tested the website across multiple pages.
+Sửa nội dung tại `src/data/content.js`, menu tại `src/views/partials/header.ejs`, style tại `public/css/site.css`.
 
-I also used Git and GitHub for version control and deployment.
+## Form liên hệ đã làm được gì?
 
-## Development Workflow
+`GET /contact` tạo form có token. `POST /contact` kiểm tra token và dữ liệu, lưu SQLite rồi chuyển sang trang thành công bằng HTTP 303. Chạy `npm run messages` để xem tối đa 50 tin gần nhất. Lệnh này chỉ dành cho người có quyền truy cập máy chủ; không có API công khai đọc tin nhắn.
 
-During development, I used AI-assisted tools as a support resource for:
+Tin nhắn **chưa được gửi qua email**. Chưa có tài khoản, đăng nhập, trang admin hay upload. Không dùng địa chỉ email khách nhập làm bằng chứng danh tính. Trang `/health` chỉ báo tiến trình HTTP đang chạy, không phải kiểm tra database.
 
-- Analyzing project requirements
-- Debugging HTML, CSS, and JavaScript issues
-- Exploring alternative UI implementations
-- Reviewing code structure
-- Learning unfamiliar web-development concepts
+## Đọc tiếp theo thứ tự
 
-AI-generated suggestions were reviewed, modified, and tested before being incorporated into the final project.
+1. [Tổng kết folder gốc và chuyển đổi](docs/01-TONG-QUAN.md)
+2. [Gia sư backend: học qua chính website này](docs/02-HOC-BACKEND.md)
+3. [Các lớp bảo vệ và triển khai](docs/03-BAO-MAT-TRIEN-KHAI.md)
+4. [Giải thích từng file và lộ trình học frontend/backend](docs/05-GIAI-THICH-TUNG-FILE.md)
+5. [Đối chiếu cách chạy với NiceFit](docs/06-TUONG-THICH-NICEFIT.md)
 
-## Project Structure
-
-Key files and folders include:
-
-- `index.html` — main page
-- `work.html` — project/work page
-- `contact.html` — contact page
-- `Style.css` — custom styling
-- `assets/` — images, styles, scripts, and supporting resources
-- `_config.yml` — Jekyll configuration
-
-## Live Website
-
-Add the deployed GitHub Pages URL here.
-
-## Future Improvements
-
-- Improve accessibility
-- Optimize mobile responsiveness
-- Improve performance and Lighthouse scores
-- Add additional portfolio projects
-- Continue refining UI and navigation
-
-## Author
-
-**Huy Gia Pham**  
-Computer Science Graduate  
-The University of Texas at San Antonio
+ZIP gốc không bị chỉnh sửa. Thư viện cài đặt và dữ liệu khách không đi kèm gói bàn giao.
