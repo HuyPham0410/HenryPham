@@ -5,6 +5,8 @@ const { randomBytes } = require("node:crypto");
 const root = path.resolve(__dirname, "..");
 function loadConfig(env = process.env) {
   const production = env.NODE_ENV === "production";
+  // Render's proxy requires all-interface binding, even if HOST was copied from a local .env.
+  const onRender = env.RENDER === "true";
   const port = Number(env.PORT || 3000);
   if (!Number.isInteger(port) || port < 1 || port > 65535)
     throw new Error("PORT must be 1–65535");
@@ -21,7 +23,7 @@ function loadConfig(env = process.env) {
   return {
     production,
     port,
-    host: env.HOST || "127.0.0.1",
+    host: onRender ? "0.0.0.0" : env.HOST || (production ? "0.0.0.0" : "127.0.0.1"),
     csrfSecret: env.CSRF_SECRET || randomBytes(32).toString("hex"),
     databasePath: path.resolve(
       root,
