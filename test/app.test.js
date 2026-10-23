@@ -42,7 +42,7 @@ test("CV pages expose verified content and local assets without stale student cl
   assert.match(home.text, /May 2026/);
   const resume = await request(app).get("/resume").expect(200);
   assert.match(resume.text, /3\.66/);
-  assert.match(resume.text, /Huy-Pham-CV\.pdf/);
+  assert.match(resume.text, /Pham_Gia_Huy_CV\.pdf/);
   const work = await request(app).get("/work").expect(200);
   for (const title of [
     "NiceFit",
@@ -55,7 +55,7 @@ test("CV pages expose verified content and local assets without stale student cl
     .expect(200)
     .expect("Content-Type", /css/);
   await request(app)
-    .get("/assets/documents/Huy-Pham-CV.pdf")
+    .get("/assets/documents/Pham_Gia_Huy_CV.pdf")
     .expect(200)
     .expect("Content-Type", /pdf/);
 });

@@ -4,9 +4,11 @@ const profile = {
   name: "Huy (Henry) Pham",
   email: "giahuyphamm@gmail.com",
   github: "https://github.com/HuyPham0410",
-  cv: "/assets/documents/Huy-Pham-CV.pdf",
+  cv: "/assets/documents/Pham_Gia_Huy_CV.pdf",
+  resumeName: "Phạm Gia Huy",
+  location: "Ho Chi Minh City, Vietnam",
   summary:
-    "Computer Science graduate exploring the intersection of software, web development, and machine learning. I enjoy connecting the pieces, debugging the details, and turning ideas into working projects.",
+    "Computer Science graduate with project experience in web development, machine learning, and technical research. Skilled in debugging, application integration, and model validation. Seeking an entry-level software engineering, web development, or AI/ML role.",
   about: [
     "I’m Huy, also known as Henry. Originally from Vietnam, I graduated from The University of Texas at San Antonio with a B.S. in Computer Science in May 2026.",
     "My academic and team projects have taken me from responsive websites and database-backed applications to machine learning experiments and privacy-focused research. I learn by building, testing, and understanding why things work.",
@@ -42,6 +44,7 @@ const profile = {
     {
       title: "AI-assisted development",
       items: [
+        "ChatGPT / Codex",
         "Task analysis",
         "Debugging",
         "Technical research",
@@ -108,11 +111,12 @@ const projects = [
     description:
       "A responsive home for my background, projects, and next chapter in software development.",
     contribution:
-      "Originally built as a static portfolio; this version adds reusable EJS templates and a Node.js contact backend.",
+      "Originally built as a static portfolio on GitHub Pages; developed further with Codex assistance into an Express/EJS website deployed on Render.",
     details: [
       "Created multi-page layouts, navigation, forms, and responsive components.",
       "Used Git and GitHub for version control; the original static version was deployed through GitHub Pages.",
       "The current version uses Bootstrap, Express, EJS, and SQLite; it requires a Node.js server.",
+      "Directed design iterations, reported runtime and deployment errors, and used Codex explanations to learn server structure, environment configuration, and Git workflows.",
     ],
     tags: ["Bootstrap", "Express", "EJS", "SQLite"],
   },
